@@ -4,16 +4,7 @@ const router = express.Router();
 // Sample treatment data for tomato plant
 const tomatoTreatments = {
     'Tomato___Bacterial_spot': {
-      treatment: ['Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-        'Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering',
-      ],
+      treatment: ['Apply copper-based fungicides', 'Remove infected leaves', 'Avoid overhead watering'],
       duration: 'Every 2 weeks',
     },
     'Tomato___Early_blight': {
