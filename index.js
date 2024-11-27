@@ -1,8 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const tomatoRoutes = require('./routes/tomato');
-const potatoRoutes = require('./routes/potato');
-const cornRoutes = require('./routes/corn');
+const tomatoRoutes = require('./routes/plants/tomato');
+const potatoRoutes = require('./routes/plants/potato');
+const cornRoutes = require('./routes/plants/corn');
 
 const app = express();
 const port = 5000;
