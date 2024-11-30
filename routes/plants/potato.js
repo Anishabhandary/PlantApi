@@ -1,28 +1,39 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+const fs = require('fs');
 
-// Sample treatment data for potato plant
-const potatoTreatments = {
-  'Potato___Early_blight': {
-    treatment: ['Apply fungicides', 'Practice crop rotation'],
-    duration: 'Once every 7 days',
-  },
+// Function to load the localized treatment data
+const loadLocalizedData = (lang) => {
+  const filePath = path.join(__dirname, `../../locales/${lang}.json`);
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Language file ${lang}.json not found`);
+  }
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 };
 
-// Define the route for potato treatment recommendation
+// Sample route for tomato plant
 router.get('/:disease', (req, res) => {
   const { disease } = req.params;
+  const lang = req.query.lang || 'en';  // Default to 'en' if no lang parameter is provided
 
-  if (!potatoTreatments[disease]) {
-    return res.status(404).json({ error: 'Disease not found for Potato' });
+  try {
+    const localizedData = loadLocalizedData(lang);
+    const potatoTreatments = localizedData.potato;
+
+    if (!potatoTreatments[disease]) {
+      return res.status(404).json({ error: `Disease not found for Corn in ${lang}` });
+    }
+
+    const treatmentData = potatoTreatments[disease];
+    res.json({
+      disease,
+      treatment: treatmentData.treatment,
+      duration: treatmentData.duration,
+    });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
-
-  const treatmentData = potatoTreatments[disease];
-  res.json({
-    disease,
-    treatment: treatmentData.treatment,
-    duration: treatmentData.duration,
-  });
 });
 
 module.exports = router;

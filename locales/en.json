@@ -1,4 +1,70 @@
 {
+    "corn": {
+
+      "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "treatment": [
+          "Apply fungicides containing strobilurins or triazoles",
+          "Remove crop debris to reduce overwintering spores",
+          "Plant resistant hybrids"
+        ],
+        "duration": "Every 7-14 days during wet weather"
+      },
+
+      "Corn_(maize)___Common_rust_": {
+        "treatment": [
+          "Apply fungicides with active ingredients like azoxystrobin or propiconazole",
+          "Plant resistant varieties",
+          "Control moisture to reduce humidity around plants"
+        ],
+        "duration": "Once every 10-14 days during the growing season"
+      },
+
+      "Corn_(maize)___Northern_Leaf_Blight": {
+        "treatment": [
+          "Apply fungicides containing mancozeb or propiconazole",
+          "Rotate crops to reduce pathogen buildup",
+          "Ensure proper spacing for good air circulation"
+        ],
+        "duration": "Every 7-10 days when conditions are favorable for disease"
+      },
+
+      "Corn_(maize)___healthy": {
+        "treatment": [
+          "No treatment needed",
+          "Ensure balanced fertilization and irrigation"
+        ],
+        "duration": "N/A"
+      }
+  },
+
+  "potato": {
+      "Potato___Early_blight": {
+        "treatment": [
+          "Apply fungicides containing chlorothalonil or mancozeb",
+          "Remove and destroy infected leaves",
+          "Ensure crop rotation to break the disease cycle"
+        ],
+        "duration": "Every 7-10 days during the growing season"
+      },
+
+      "Potato___Late_blight": {
+        "treatment": [
+          "Use systemic fungicides like metalaxyl or mancozeb",
+          "Destroy infected plants to prevent spread",
+          "Avoid overhead irrigation during humid conditions"
+        ],
+        "duration": "Every 5-7 days during wet or humid weather"
+      },
+
+      "Potato___healthy": {
+        "treatment": [
+          "No treatment needed",
+          "Maintain proper fertilization and watering schedules"
+        ],
+        "duration": "N/A"
+      }
+  },
+
     "tomato": {
           "Tomato___Bacterial_spot": {
         "treatment": [
